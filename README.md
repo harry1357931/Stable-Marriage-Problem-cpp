@@ -33,14 +33,14 @@ For example m1 would prefer w2 to w1 and likewise w2 prefers m1 to m2.
 Use the same approach that we used for the one dimensional eight queens problem. In the array q, q[i] is the woman 
 assigned to man i. The main program stays the same, besides the limits on the loops. All that needs to change is the 
 ok<br> function. Is could look something like this:
-<br>&nbsp;&nbsp;&nbsp;&nbsp;
-<br><b>b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ool ok(int q[], int col)</b> {
-<b<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        col indicates the new man and q[col] the new woman proposed to be added to the match.
-<br><br>We &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;need to&nbsp;&nbsp;&nbsp; do 2 tets:
-<br>&nbsp;&nb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sp;&nbsp;&nbsp;    1. If the new woman has already been assigned to some man then return false
-<br>&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;    2. Check the new pair (new man, new woman) against each existing pair consisting of (current man, current woman) to see if the new pair would make the match unstable. So
-<br>&nbsp;&nbsp;&nbs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p;&nbsp;&nbsp;        a. if the current man prefers the new woman to his partner and
-<br>&nbsp;&nbsp;&nbs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p;&nbsp;&nbsp;&nbsp;        b. if the new woman prefers the current man to her partner
+<br>
+<br><b>bool ok(int q[], int col)</b> {
+<b<br>  col indicates the new man and q[col] the new woman proposed to be added to the match.
+<br><br>We need to do 2 tets:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    1. If the new woman has already been assigned to some man then return false
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;    2. Check the new pair (new man, new woman) against each existing pair consisting of (current man, current woman) to see if the new pair would make the match unstable. So
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p;&nbsp;&nbsp;        a. if the current man prefers the new woman to his partner and
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p;&nbsp;&nbsp;&nbsp;        b. if the new woman prefers the current man to her partner
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                i. this is unstable, so return false
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        c. if the new man prefers the current woman to his partner and
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        d. if the current woman prefers the new man to her partner
