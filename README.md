@@ -47,3 +47,8 @@ ok<br> function. Is could look something like this:
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     i. This is unstable, so return false
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        e. if there are no instabilities introduced with any of the existing (i.e. “current”) couples, so we return true.
 <br>}
+
+Example:
+========
+Check file for Example: 'stable marriage using backtrack assignment.pdf'
+
